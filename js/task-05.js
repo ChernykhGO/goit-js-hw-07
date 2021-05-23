@@ -14,9 +14,12 @@ inputEL.addEventListener('input', onInputChenge);
 
 // 3.Меняем спан на значение инпута, если пусто, то не меняем
 function onInputChenge(event) {
-    // console.log(event.currentTarget.value);
-    nameEL.textContent = event.currentTarget.value;
-    if (event.currentTarget.value === '') {
-        nameEL.textContent = 'незнакомец'
-    };
+  // console.log(event.currentTarget.value);
+  nameEL.textContent = event.currentTarget.value;
+  // if (event.currentTarget.value === '') {
+  //     nameEL.textContent = 'незнакомец'
+  if (nameEL.textContent.trim() === "") {
+    nameEL.textContent = 'незнакомец';
+  }
 };
+
